@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('cupboard_id')->constrained();
             $table->foreignId('cupboard_item_type_id')->constrained();
             $table->foreignId('quantity_type_id')->constrained();
-            $table->foreignId('volume_type_id')->constrained();
             $table->string('name');
             $table->string('quantity');
             $table->string('volume');

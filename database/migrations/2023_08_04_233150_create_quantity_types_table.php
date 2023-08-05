@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('quantity_types', function (Blueprint $table) {
             $table->id();
             $table->string('quantity_type');
+            $table->string('quantity_type_shorthand');
             $table->timestamps();
         });
     }

@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Cupboard;
+use App\Models\CupboardItem;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,11 +21,16 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
+        
         $this->call([
             CupboardItemTypeSeeder::class,
             QuantityTypeSeeder::class,
         ]);
+        
+        User::factory()->count(3)->has(Cupboard::factory())->create();
+        CupboardItem::factory()->count(100)->create();
+
+
 
 
     }

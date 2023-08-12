@@ -20,8 +20,4 @@ class CupboardItem extends Model
         return $this->hasOne(QuantityType::class);
     }
 
-    public function volumeType(): HasOne
-    {
-        return $this->hasOne(VolumeType::class);
-    }
 }
